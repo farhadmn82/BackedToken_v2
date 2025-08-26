@@ -36,7 +36,7 @@ contract BackedGold is ERC20, Ownable {
         string memory name_,
         string memory symbol_,
         address controller_
-    ) ERC20(name_, symbol_) {
+    ) ERC20(name_, symbol_) Ownable(msg.sender) {
         controller = controller_;
     }
 
